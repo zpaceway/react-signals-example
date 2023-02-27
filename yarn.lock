@@ -329,10 +329,10 @@
     magic-string "^0.26.7"
     react-refresh "^0.14.0"
 
-"@zpaceway/react-signals@^1.4.1":
-  version "1.4.1"
-  resolved "https://registry.yarnpkg.com/@zpaceway/react-signals/-/react-signals-1.4.1.tgz#f19fb0b3b0d0877256a60db1ae129f097a1b8231"
-  integrity sha512-rYOZGL37n0nYLpffg7w9GCZoU1UenPJajkhAs7auNP28tfoaUhKUHeg034LY7Zm1cD7RJoTa4Zqao2dsMX+1zw==
+"@zpaceway/react-signals@^1.5.1":
+  version "1.5.1"
+  resolved "https://registry.yarnpkg.com/@zpaceway/react-signals/-/react-signals-1.5.1.tgz#04ddb0e7232cad69f83995f94911a30b989e0e69"
+  integrity sha512-o48HaKqzzaF2oCDg43RSD0a9oLohAMk1AbYqi+ajyPsKTE6sp2wiNc6q6Hua0mXAe+f8suVs48IeOHa0lCJ1TQ==
   dependencies:
     react "^18.2.0"
     rxjs "^7.8.0"

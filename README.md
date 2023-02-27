@@ -1,14 +1,29 @@
-# Vite + React
+# react-signals Example
 
-This is a [Vite](https://vitejs.dev) project together with React.
+This repo shows up how to use react-signals. It will be updated if changes are made in the API.
 
-[![Edit in CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/github/codesandbox/codesandbox-template-vite-react/main)
+In theory the usage is very simple, first you create a signal object manually, or with the help of the `createSignal` function.
 
-[Configuration](https://codesandbox.io/docs/projects/learn/setting-up/tasks) has been added to optimize it for [CodeSandbox Projects](https://codesandbox.io/p/dashboard).
+```js
+const counterSignal = createSignal({
+  initialValue: 0,
+});
+```
 
-## Resources
+Then you can use this object with the `useSignal` hook inside of any component
 
-- [CodeSandbox Projects — Docs](https://codesandbox.io/docs/projects)
-- [CodeSandbox — Discord](https://discord.gg/Ggarp3pX5H)
-- [Vite — GitHub](https://github.com/vitejs/vite)
-- [Vite — Docs](https://vitejs.dev/guide/)
+```js
+const App = () => {
+  const { state: count, setState: setCount } = useSignal(counterSignal);
+
+  return (
+    <div>
+      <div>{count}</div>
+      <div>
+        <button onClick={() => setCount(count + 1)}>+</button>
+        <button onClick={() => setCount(count - 1)}>-</button>
+      </div>
+    </div>
+  );
+};
+```
